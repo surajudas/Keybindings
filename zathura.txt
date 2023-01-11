@@ -1,0 +1,8 @@
+tab -> Index/contents browser
+j/k -> zoom in/out
+f -> full screen toggle
+: -> command bar (can be used to open recent files)
+i -> Invert dark/light mode
+d -> Toggle 1 or 2 page spread
+/ -> find query in text
+'double click link' -> to follow it
