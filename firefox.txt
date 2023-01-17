@@ -1,0 +1,4 @@
+ctrl+t -> new tab
+ctrl+w -> close tab
+
+rest all pretty obvious
