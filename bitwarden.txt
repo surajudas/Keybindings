@@ -1,0 +1,2 @@
+ctrl+shift+y - Autofill usrname/pass
+ctrl+shift+w - Activate bitwarden
