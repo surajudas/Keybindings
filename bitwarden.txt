@@ -1,2 +1,3 @@
-ctrl+shift+y - Autofill usrname/pass
-ctrl+shift+w - Activate bitwarden
+Ctrl + Shift + Y → Activate extension
+
+Ctrl + Shift + L → Auto-fill, press again to cycle through matching logins
