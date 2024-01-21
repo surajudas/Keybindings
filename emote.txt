@@ -1,0 +1,2 @@
+- ctrl + e: open picker
+- shift + select: multiple emojis are selected
