@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Specify the path to the Markdown file you want to update
+markdown_file="/home/suraj/Documents/workflowProjects/keybindings/README.md"
+
+# Get the directory of the Markdown file
+markdown_dir=$(dirname "$markdown_file")
+
+# Iterate through new files in the directory and update the Markdown file
+for new_file in "$markdown_dir"/*; do
+    # Check if it's a regular file and not the Markdown file itself
+    if [ -f "$new_file" ] && [ "$new_file" != "$markdown_file" ]; then
+        # Get the file name without the directory path and extension
+        file_name=$(basename -- "$new_file")
+        file_name_without_extension="${file_name%.*}"
+
+        # Create the Markdown link
+        markdown_link="https://github.com/surajudas/Keybindings/blob/main/$file_name_without_extension.txt"
+
+        # Check if the link already exists in the Markdown file
+        if grep -q "$markdown_link" "$markdown_file"; then
+            echo "Link for $file_name already exists in $markdown_file"
+        else
+            # Append the Markdown link to the file
+            echo -e "\n[$file_name_without_extension]($markdown_link)" >> "$markdown_file"
+            echo "Added link for $file_name in $markdown_file"
+        fi
+    fi
+done
+
